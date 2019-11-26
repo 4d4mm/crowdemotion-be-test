@@ -42,7 +42,8 @@ def api_request(method, path, **kwargs):
     return requests.request(
         method, 
         f"{DEMAND_API_URL}{path}",
-        auth=DemandAuth()
+        auth=DemandAuth(),
+        **kwargs
     )
 
 class DemandApi(object):
